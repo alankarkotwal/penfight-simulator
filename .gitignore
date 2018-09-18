@@ -1,0 +1,8 @@
+*~
+*.asv
+*.temp
+*.tmp
+*DS_Store*
+*.out
+*.log
+*.aux
