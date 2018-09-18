@@ -1,0 +1,21 @@
+\documentclass[12pt,letterpaper]{article}
+%\usepackage[margin=1in]{geometry}
+\usepackage{titling,tikz,hyperref,gensymb,graphicx,subcaption}
+
+\setlength{\droptitle}{-4em}
+
+\title{Simulating winning strategies in pen wars}
+\author{Arjav Desai (\href{mailto:arjavasd@andrew.cmu.edu}{\texttt{arjavasd}}), Alankar Kotwal (\href{mailto:askotwal@andrew.cmu.edu}{\texttt{askotwal}})}
+
+\pagenumbering{gobble}
+
+\begin{document}
+\maketitle
+
+\noindent Pen wars\footnote{\href{https://www.youtube.com/watch?v=hK0Xs3NbFNw}{video}} is a classic game among schoolkids. It involves two players, two standard pens and a table. The objective of the game is to knock your opponent's pen outside the table by flicking your pen at it anywhere on the length of your pen. The person to knock off the opponent's pen off the table while herself staying on the table wins the game. There also lives a multiplayer variant of this game that involves being the last pen left on the table. \\
+
+\noindent Our project will aim to find, on every iteration, the winning manipulation move for one player. This will take into account the weight and size of each pen, friction between the pens and the table, the range of flick motions possible with the thumb and the index finger and the safety of the final position of our pen. Reinforcement learning strategies may alternatively be applied to work on a simulation of the system. \\
+
+\noindent In the improbable event that we are able to finish finding the optimal strategy for a two-person game within the course of the semester, we shall attempt to find a winning strategy for the multiplayer variant of the game.
+
+\end{document}
