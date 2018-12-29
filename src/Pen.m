@@ -31,13 +31,14 @@ classdef Pen
            %obj.density = obj.weight / (2*pi*obj.radius*obj.length);
            
            if(nargin == 6)
-               obj.linearVelocity = [0, 0];
+               obj.linearVelocity = [0; 0];
                obj.angularVelocity = 0;
            else
                penEnds = obj.center + [obj.length * [cos(obj.angle), -cos(obj.angle)] / 2;
                                       -obj.length * [-sin(obj.angle), sin(obj.angle)] / 2];
 
-               if norm(point - penEnds(:, 1)) + norm(point - penEnds(:, 2)) ~= obj.length
+               if abs(norm(point - penEnds(:, 1)) + norm(point - penEnds(:, 2)) - obj.length) > 1e-10
+                   disp(abs(norm(point - penEnds(:, 1)) + norm(point - penEnds(:, 2)) - obj.length));
                    error('You cannot hit the pen here! This point doesn''t lie on the pen.');
                end
 
